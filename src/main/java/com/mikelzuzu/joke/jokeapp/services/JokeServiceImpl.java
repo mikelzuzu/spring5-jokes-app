@@ -8,8 +8,13 @@ public class JokeServiceImpl implements JokeService {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokeServiceImpl() {
+    /*public JokeServiceImpl() {
         this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    }*/
+
+    //constructor based injection
+    public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
